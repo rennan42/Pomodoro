@@ -1,0 +1,43 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+$gutter: 65px;
+
+@function col($col, $offset: false){
+    $width: $col / 12 * 100 + '%';
+
+    $result: calc(#{$width} - #{$gutter});
+
+    // @if $offset == offset {
+    //     $gutter: 65/2;
+    //     $result: calc(#{$width} + #{$gutter});
+    // } 
+    @return $result;
+}
+
+@for $i from 1 through 12 {
+    .col-#{$i}{
+        width: col($i);
+    }
+}
+
+@mixin container {
+    max-width: 90vw;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+
+}
+
+@mixin row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container{
+    @include container();
+}
+
+.row{
+    @include row();
+}

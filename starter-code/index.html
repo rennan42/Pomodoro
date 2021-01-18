@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./styles//pomodoro.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&family=Roboto+Slab:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Pomodoro app</title>
+  </head>
+
+  <body>
+    <main>
+      <h1 class="title">pomodoro</h1>
+
+      <div class="container-options">
+        <ul class="options">
+          <li class="option active">
+            <a>pomodoro</a>
+          </li>
+
+          <li class="option">
+            <a>short break</a>
+          </li>
+
+          <li class="option">
+            <a>long break</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="clock">
+        <div class="second-clock">
+          <svg class="progress-ring timer-indicator" width="120" height="120">
+            <circle
+              class="progress-ring__circle"
+              stroke="#F87070"
+              stroke-width="10"
+              fill="transparent"
+              r="162"
+              cx="170"
+              cy="167"
+            />
+          </svg>
+          <div class="group-timer">
+            <div class="timer">
+              <span id="minute">00</span>:
+              <span id="second">00</span>
+            </div>
+              <span id="start">START</span>
+          </div>
+        
+        </div>
+      </div>
+
+      <div class="settings" id="settings-icon">
+        <img src="./assets/icon-settings.svg">
+      </div>
+
+    </main>
+
+    <dialog id="dialog-settings" class="dialog">
+      <div class="header">
+        <span class="header-text">
+          Settings
+        </span>
+        <img id="close-button" src="./assets/icon-close.svg">
+      </div>
+      <hr class="divider">
+
+      <div class="container-time">
+        <div class="time-minutes">
+          <span>Time (Minutes)</span>
+        </div>
+
+        <div class="container-inputs">
+        <div class="inputs-values">
+          <label>pomodoro</label>
+          <input
+          class="inputs"
+          type="number"
+          >
+        </div>
+
+        <div class="inputs-values">
+          <label>short break</label>
+          <input
+          class="inputs"
+          type="number"
+          >
+        </div>
+
+        <div class="inputs-values">
+          <label>long break</label>
+          <input
+          class="inputs"
+          type="number"
+          >
+        </div>
+
+      </div>
+
+      </div>
+      <hr class="divider">
+    </dialog>
+    <!-- 
+
+  Time (minutes)
+  pomodoro
+  short break
+  long break
+
+  Font
+  Color
+
+  Apply -->
+
+    <script src="./pomodoro.js"></script>
+  </body>
+</html>

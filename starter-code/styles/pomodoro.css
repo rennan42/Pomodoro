@@ -1,0 +1,555 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.col-1 {
+  width: calc(8.33333% - 65px);
+}
+
+.col-2 {
+  width: calc(16.66667% - 65px);
+}
+
+.col-3 {
+  width: calc(25% - 65px);
+}
+
+.col-4 {
+  width: calc(33.33333% - 65px);
+}
+
+.col-5 {
+  width: calc(41.66667% - 65px);
+}
+
+.col-6 {
+  width: calc(50% - 65px);
+}
+
+.col-7 {
+  width: calc(58.33333% - 65px);
+}
+
+.col-8 {
+  width: calc(66.66667% - 65px);
+}
+
+.col-9 {
+  width: calc(75% - 65px);
+}
+
+.col-10 {
+  width: calc(83.33333% - 65px);
+}
+
+.col-11 {
+  width: calc(91.66667% - 65px);
+}
+
+.col-12 {
+  width: calc(100% - 65px);
+}
+
+.container {
+  max-width: 90vw;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #1E213F;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 16px;
+  color: #D7E0FF;
+}
+
+main {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.title {
+  text-align: center;
+}
+
+.container-options {
+  width: 100%;
+  height: 63px;
+  background-color: #161932;
+  border-radius: 150px;
+  margin-top: 55px;
+}
+
+.container-options .options {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.container-options .options .option {
+  color: #D7E0FF;
+  font-size: 14px;
+  cursor: pointer;
+  -webkit-transition: opacity 200ms ease;
+  transition: opacity 200ms ease;
+}
+
+.container-options .options .option:hover {
+  opacity: 0.7;
+}
+
+.container-options .active {
+  background-color: #F87070;
+  width: 120px;
+  height: 48px;
+  border-radius: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container-options .option:first-child {
+  padding-left: 30px;
+}
+
+.container-options .option:last-child {
+  padding-right: 30px;
+}
+
+.container-options .option:first-child.active, .container-options .option:last-child.active {
+  padding: 0;
+}
+
+.container-options .option.active {
+  color: #1E213F;
+  font-weight: bold;
+}
+
+.clock {
+  background-color: #161932;
+  height: 410px;
+  width: 410px;
+  border-radius: 50%;
+  background: linear-gradient(315deg, #2E325A 0%, #0E112A 100%);
+  -webkit-box-shadow: -50px -50px 100px #272C5A, 50px 50px 100px #121530;
+          box-shadow: -50px -50px 100px #272C5A, 50px 50px 100px #121530;
+  margin-top: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.clock .second-clock {
+  width: 366px;
+  height: 366px;
+  background-color: #161932;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.clock .second-clock .timer-indicator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 339px;
+  width: 339px;
+  position: relative;
+  stroke-linecap: round;
+}
+
+.clock .second-clock .group-timer {
+  position: absolute;
+}
+
+.clock .second-clock .timer {
+  color: #D7E0FF;
+  width: 233px;
+  height: 101px;
+  font-size: 85px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: bold;
+}
+
+.clock .second-clock #start {
+  font-family: "Kumbh Sans", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #D7E0FF;
+  cursor: pointer;
+  -webkit-transition: opacity 200ms ease;
+  transition: opacity 200ms ease;
+  letter-spacing: 20px;
+  font-weight: 700;
+  margin-left: 10px;
+  text-transform: uppercase;
+}
+
+.clock .second-clock #start:hover {
+  opacity: 0.7;
+}
+
+.settings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 30px;
+  cursor: pointer;
+  -webkit-transition: opacity 200ms ease;
+  transition: opacity 200ms ease;
+}
+
+.settings:hover {
+  opacity: 0.7;
+}
+
+.settings img:hover {
+  -webkit-animation: spin 0.3s linear normal;
+          animation: spin 0.3s linear normal;
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+
+.container-time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 30%;
+  padding: 30px 38px 0px 38px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.dialog {
+  position: absolute;
+  width: 40%;
+  height: 65%;
+  border-radius: 25px;
+  top: 20%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.dialog .header {
+  padding-top: 20px;
+  padding-left: 40px;
+  padding-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dialog .header .header-text {
+  width: 100%;
+  height: 15%;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 28px;
+  line-height: 28px;
+  font-weight: bold;
+  color: #161932;
+}
+
+.dialog .header img {
+  margin-right: 38px;
+  cursor: pointer;
+  -webkit-transition: opacity 200ms ease;
+  transition: opacity 200ms ease;
+}
+
+.dialog .header img:hover {
+  opacity: 0.7;
+}
+
+.dialog .header img:hover {
+  -webkit-animation: spin 0.3s linear normal;
+          animation: spin 0.3s linear normal;
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+
+.dialog .header::after {
+  content: '';
+  display: block;
+  border-bottom: 1px solid black;
+}
+
+.dialog .divider {
+  border-top: 1px solid #bbb;
+}
+
+.dialog .container-inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.dialog .time-minutes {
+  font-family: "Kumbh Sans", sans-serif;
+  color: #161932;
+  letter-spacing: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: block;
+  width: 100%;
+}
+
+.dialog .inputs-values {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dialog .inputs-values label {
+  font-family: "Kumbh Sans", sans-serif;
+  color: #1E213F;
+  font-weight: bold;
+}
+
+.dialog .inputs-values .inputs {
+  border-color: #1e213f14;
+  border-radius: 10px;
+  height: 48px;
+  width: 140px;
+  background-color: #1e213f14;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px;
+  margin-top: 8px;
+  border: none;
+}
+
+.dialog .inputs-values .arrow-up {
+  position: absolute;
+  left: 28%;
+  top: 36%;
+  cursor: pointer;
+}
+
+.dialog .inputs-values .arrow-down {
+  position: absolute;
+  top: 39%;
+  left: 28%;
+  cursor: pointer;
+}
+
+.dialog hr {
+  margin-top: 5%;
+}
+
+input[type=number] {
+  height: 30px;
+  line-height: 30px;
+  font-size: 16px;
+  padding: 0 8px;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  cursor: pointer;
+  display: block;
+  width: 8px;
+  color: #333;
+  text-align: center;
+  position: relative;
+}
+
+input[type=number]:hover::-webkit-inner-spin-button {
+  background: #eee url("http://i.stack.imgur.com/YYySO.png") no-repeat 50% 50%;
+  width: 14px;
+  height: 14px;
+  padding: 4px;
+  position: relative;
+  right: 4px;
+  border-radius: 28px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+/*# sourceMappingURL=pomodoro.css.map */
