@@ -138,10 +138,10 @@ main{
     justify-content: center;
     align-items: center;
     margin-top: 30px;
-    @include hover-text-animation;
 
     img:hover{
         @include rotate-image;
+        @include hover-text-animation;
     }
 }
 
@@ -151,150 +151,6 @@ main{
     padding: 30px 38px 0px 38px;
     flex-direction: column;
 }
-
-.dialog{
-    position: absolute;
-    width: 40%;
-    height: 65%;
-    border-radius: 25px;
-    top: 20%;
-    flex-direction: column;
-    -webkit-animation:scale-up-center .4s cubic-bezier(.39,.575,.565,1.000) both;animation:scale-up-center .4s cubic-bezier(.39,.575,.565,1.000) both;
-
-    .header{
-        padding-top: 20px;
-        padding-left: 40px;
-        padding-bottom: 10px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        //border-bottom: 1px solid gray;
-        
-        .header-text{
-        width: 100%;
-        height: 15%;
-        font-family: $khumbsans;
-        font-size: 28px;
-        line-height: 28px;
-        font-weight: bold;
-        color: $darkerblue;
-        }
-
-        img{
-            margin-right: 38px;
-            @include hover-text-animation;
-        }
-        img:hover{
-            @include rotate-image;
-            
-        }
-        
-    }
-    .header::after{
-        content: '';
-        display: block;
-        border-bottom: 1px solid black;
-    }
-    .divider{
-        border-top: 1px solid #bbb;
-    }
-
-    .container-inputs{
-        display: flex;
-        flex-direction: row;
-        margin-top: 20px;
-        justify-content: space-between;
-    }
-
-    .time-minutes{
-        font-family:$khumbsans;
-        color: $darkerblue;
-        letter-spacing: 5px;
-        font-weight: bold;
-        text-transform: uppercase;
-        display: block;
-        width: 100%;
-    }
-
-    .inputs-values{
-
-        flex-direction: column;
-        display: flex;
-
-        label{
-            font-family: $khumbsans;
-            color: $darkblue;
-            font-weight: bold;
-        }
-
-        .inputs{
-            border-color: #1e213f14;
-            border-radius: 10px;
-            height: 48px;
-            width: 140px;
-            background-color: #1e213f14;
-            font-family: $khumbsans;
-            font-size: 20px;
-            font-weight: bold;
-            padding: 15px;
-            margin-top: 8px;
-            border: none;
-        }
-
-        .arrow-up{
-            position: absolute;
-            left: 28%;
-            top: 36%;
-            cursor: pointer;
-        }
-
-        .arrow-down{
-            position: absolute;
-            top: 39%;
-            left: 28%;
-            cursor: pointer;
-        }
-    }
-    hr{
-        margin-top: 5%;
-    }
-}
-
-input[type=number] {
-    height: 30px;
-    line-height: 30px;
-    font-size: 16px;
-    padding: 0 8px;
-}
-input[type=number]::-webkit-inner-spin-button { 
-    -webkit-appearance: none;
-    cursor:pointer;
-    display:block;
-    width:8px;
-    color: #333;
-    text-align:center;
-    position:relative;
-}    
-input[type=number]:hover::-webkit-inner-spin-button { 
-    background: #eee url('http://i.stack.imgur.com/YYySO.png') no-repeat 50% 50%;  
-    width: 14px;
-    height: 14px;
-    padding: 4px;
-    position: relative;
-    right: 4px;
-    border-radius: 28px;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  margin: 0;
-}
-
- @-webkit-keyframes scale-up-center{0%{-webkit-transform:scale(.5);transform:scale(.5)}100%{-webkit-transform:scale(1);transform:scale(1)}}@keyframes scale-up-center{0%{-webkit-transform:scale(.5);transform:scale(.5)}100%{-webkit-transform:scale(1);transform:scale(1)}}
-  
 
 
 

@@ -312,18 +312,14 @@ main {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 30px;
-  cursor: pointer;
-  -webkit-transition: opacity 200ms ease;
-  transition: opacity 200ms ease;
-}
-
-.settings:hover {
-  opacity: 0.7;
 }
 
 .settings img:hover {
   -webkit-animation: spin 0.3s linear normal;
           animation: spin 0.3s linear normal;
+  cursor: pointer;
+  -webkit-transition: opacity 200ms ease;
+  transition: opacity 200ms ease;
 }
 
 @-webkit-keyframes spin {
@@ -340,6 +336,10 @@ main {
   }
 }
 
+.settings img:hover:hover {
+  opacity: 0.7;
+}
+
 .container-time {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -350,206 +350,5 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-.dialog {
-  position: absolute;
-  width: 40%;
-  height: 65%;
-  border-radius: 25px;
-  top: 20%;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-}
-
-.dialog .header {
-  padding-top: 20px;
-  padding-left: 40px;
-  padding-bottom: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.dialog .header .header-text {
-  width: 100%;
-  height: 15%;
-  font-family: "Kumbh Sans", sans-serif;
-  font-size: 28px;
-  line-height: 28px;
-  font-weight: bold;
-  color: #161932;
-}
-
-.dialog .header img {
-  margin-right: 38px;
-  cursor: pointer;
-  -webkit-transition: opacity 200ms ease;
-  transition: opacity 200ms ease;
-}
-
-.dialog .header img:hover {
-  opacity: 0.7;
-}
-
-.dialog .header img:hover {
-  -webkit-animation: spin 0.3s linear normal;
-          animation: spin 0.3s linear normal;
-}
-
-@keyframes spin {
-  100% {
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
-  }
-}
-
-.dialog .header::after {
-  content: '';
-  display: block;
-  border-bottom: 1px solid black;
-}
-
-.dialog .divider {
-  border-top: 1px solid #bbb;
-}
-
-.dialog .container-inputs {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  margin-top: 20px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.dialog .time-minutes {
-  font-family: "Kumbh Sans", sans-serif;
-  color: #161932;
-  letter-spacing: 5px;
-  font-weight: bold;
-  text-transform: uppercase;
-  display: block;
-  width: 100%;
-}
-
-.dialog .inputs-values {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.dialog .inputs-values label {
-  font-family: "Kumbh Sans", sans-serif;
-  color: #1E213F;
-  font-weight: bold;
-}
-
-.dialog .inputs-values .inputs {
-  border-color: #1e213f14;
-  border-radius: 10px;
-  height: 48px;
-  width: 140px;
-  background-color: #1e213f14;
-  font-family: "Kumbh Sans", sans-serif;
-  font-size: 20px;
-  font-weight: bold;
-  padding: 15px;
-  margin-top: 8px;
-  border: none;
-}
-
-.dialog .inputs-values .arrow-up {
-  position: absolute;
-  left: 28%;
-  top: 36%;
-  cursor: pointer;
-}
-
-.dialog .inputs-values .arrow-down {
-  position: absolute;
-  top: 39%;
-  left: 28%;
-  cursor: pointer;
-}
-
-.dialog hr {
-  margin-top: 5%;
-}
-
-input[type=number] {
-  height: 30px;
-  line-height: 30px;
-  font-size: 16px;
-  padding: 0 8px;
-}
-
-input[type=number]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  cursor: pointer;
-  display: block;
-  width: 8px;
-  color: #333;
-  text-align: center;
-  position: relative;
-}
-
-input[type=number]:hover::-webkit-inner-spin-button {
-  background: #eee url("http://i.stack.imgur.com/YYySO.png") no-repeat 50% 50%;
-  width: 14px;
-  height: 14px;
-  padding: 4px;
-  position: relative;
-  right: 4px;
-  border-radius: 28px;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  margin: 0;
-}
-
-@-webkit-keyframes scale-up-center {
-  0% {
-    -webkit-transform: scale(0.5);
-    transform: scale(0.5);
-  }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-}
-
-@keyframes scale-up-center {
-  0% {
-    -webkit-transform: scale(0.5);
-    transform: scale(0.5);
-  }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
 }
 /*# sourceMappingURL=pomodoro.css.map */
