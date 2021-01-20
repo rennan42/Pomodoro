@@ -108,6 +108,35 @@ table {
       flex-wrap: wrap;
 }
 
+:root {
+  --primary: #F87070;
+  --primary-font: 'Kumbh Sans', sans-serif;
+}
+
+.khubms:root {
+  --primary-font: 'Kumbh Sans', sans-serif;
+}
+
+.robotoslab:root {
+  --primary-font: 'Roboto Slab', serif;
+}
+
+.spacemono:root {
+  --primary-font: 'Space Mono', monospace;
+}
+
+.orange:root {
+  --primary: #F87070;
+}
+
+.ligth-blue:root {
+  --primary: #70F3F8;
+}
+
+.ligth-purple:root {
+  --primary: #D881F8;
+}
+
 body {
   height: 100vh;
   display: -webkit-box;
@@ -160,6 +189,7 @@ main {
 .container-options .options .option {
   color: #D7E0FF;
   font-size: 14px;
+  font-family: var(--primary-font);
   cursor: pointer;
   -webkit-transition: opacity 200ms ease;
   transition: opacity 200ms ease;
@@ -170,7 +200,7 @@ main {
 }
 
 .container-options .active {
-  background-color: #F87070;
+  background-color: var(--primary);
   width: 120px;
   height: 48px;
   border-radius: 150px;
@@ -220,6 +250,10 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.clock .progress {
+  stroke: var(--primary);
 }
 
 .clock .second-clock {
@@ -272,7 +306,7 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: "Kumbh Sans", sans-serif;
+  font-family: var(--primary-font);
   font-weight: bold;
 }
 

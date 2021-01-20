@@ -55,8 +55,7 @@
         <div class="second-clock">
           <svg class="progress-ring timer-indicator" width="120" height="120">
             <circle
-              class="progress-ring__circle"
-              stroke="#F87070"
+              class="progress-ring__circle progress"
               stroke-width="10"
               fill="transparent"
               r="162"
@@ -81,6 +80,32 @@
 
     </main>
 
+
+
+
+
+
+
+
+
+<!------------------------------------------DIALOG------------------------------------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <dialog id="dialog-settings" class="dialog">
       <div class="header">
         <span class="header-text">
@@ -99,6 +124,7 @@
         <div class="inputs-values">
           <label>pomodoro</label>
           <input
+          id="pomodoro"
           class="inputs"
           type="number"
           >
@@ -107,6 +133,7 @@
         <div class="inputs-values">
           <label>short break</label>
           <input
+          id="shortBreak"
           class="inputs"
           type="number"
           >
@@ -115,6 +142,7 @@
         <div class="inputs-values">
           <label>long break</label>
           <input
+          id="longBreak"
           class="inputs"
           type="number"
           >
@@ -129,15 +157,15 @@
         <span class="font-text">font</span>
 
         <div class="container-circles">
-          <div class="circles">
+          <div id="font" class="circles font-1 color-font">
             <span>Aa</span>
           </div>
 
-          <div class="circles">
+          <div id="font" class="circles font-2">
             <span>Aa</span>
           </div>
 
-          <div class="circles">
+          <div id="font" class="circles font-3">
             <span>Aa</span>
           </div>
 
@@ -149,21 +177,30 @@
         <span class="font-color">color</span>
 
         <div class="container-circles-color">
-          <div class="circles circle-1">
+          <div id="circle" class="circles circle-1">
+              <span>
+                ✓
+              </span>
+            </div>
+  
+            <div id="circle" class="circles circle-2">
               <span></span>
             </div>
   
-            <div class="circles circle-2">
-              <span></span>
-            </div>
-  
-            <div class="circles circle-3">
+            <div id="circle" class="circles circle-3">
               <span></span>
             </div>
         </div>
       </div>
-
+      <button class="button">
+          Apply
+      </button>
     </dialog>
+
+
+<!------------------------------------------DIALOG------------------------------------------------------->
+
+
     <!-- 
 
   Time (minutes)

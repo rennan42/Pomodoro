@@ -4,6 +4,38 @@
 @import './fonts';
 @import './mixin';
 
+
+:root{
+    --primary: #F87070;
+    --primary-font: 'Kumbh Sans', sans-serif;
+}
+
+.khubms:root{
+    --primary-font: 'Kumbh Sans', sans-serif;
+}
+
+.robotoslab:root{
+    --primary-font: 'Roboto Slab', serif;
+}
+
+.spacemono:root{
+    --primary-font: 'Space Mono', monospace;
+}
+
+
+.orange:root{
+    --primary: #F87070; 
+}
+
+.ligth-blue:root{
+    --primary: #70F3F8; 
+}
+
+.ligth-purple:root{
+    --primary: #D881F8; 
+}
+
+
 body{
     height: 100vh;
     display: flex;
@@ -39,12 +71,13 @@ main{
         .option{
             color: $gray;
             font-size: 14px;
+            font-family: var(--primary-font);
             @include hover-text-animation;
         }
     }
 
     .active{
-        background-color: $orange;
+        background-color: var(--primary);
         width: 120px;
         height: 48px;
         border-radius: 150px;
@@ -84,6 +117,10 @@ main{
     justify-content: center;
     align-items: center;
 
+    .progress{
+        stroke: var(--primary);
+    }
+
     .second-clock{
         width: 366px;
         height: 366px;
@@ -114,7 +151,7 @@ main{
             display: flex;
             justify-content: center;
             align-items: center;
-            font-family: $khumbsans;
+            font-family: var(--primary-font);
             font-weight: bold;
         }
 
