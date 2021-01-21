@@ -22,6 +22,7 @@ const fontButton = document.querySelectorAll('#font');
 const colorsButton = document.querySelectorAll('#circle');
 const applyButton = document.querySelector('.button');
 
+
 applyButton.addEventListener('click', () => {
   apply();
 })

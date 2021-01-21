@@ -379,10 +379,19 @@ main {
   display: -ms-flexbox;
   display: flex;
   height: 30%;
-  padding: 30px 38px 0px 38px;
+  padding: 20px 0px 0px 30px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.Teste {
+  border-radius: 20px;
+  background-color: black;
+  color: blanchedalmond;
+  width: 20%;
+  height: 20%;
+  position: absolute;
 }
 /*# sourceMappingURL=pomodoro.css.map */

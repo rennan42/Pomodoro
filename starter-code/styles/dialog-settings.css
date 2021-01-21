@@ -111,13 +111,14 @@ table {
 .dialog {
   position: relative;
   width: 40%;
-  height: 65%;
+  height: 70%;
   border-radius: 25px;
-  top: 20%;
+  top: 5%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  overflow: initial;
   -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
@@ -230,8 +231,8 @@ table {
 .dialog .inputs-values .inputs {
   border-color: #1e213f14;
   border-radius: 10px;
-  height: 48px;
-  width: 140px;
+  height: 90%;
+  width: 90%;
   background-color: #1e213f14;
   font-family: "Kumbh Sans", sans-serif;
   font-size: 20px;
