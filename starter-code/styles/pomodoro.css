@@ -286,6 +286,8 @@ main {
   width: 339px;
   position: relative;
   stroke-linecap: round;
+  -webkit-transform: rotate(276deg);
+          transform: rotate(276deg);
 }
 
 .clock .second-clock .group-timer {
@@ -384,14 +386,5 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-.Teste {
-  border-radius: 20px;
-  background-color: black;
-  color: blanchedalmond;
-  width: 20%;
-  height: 20%;
-  position: absolute;
 }
 /*# sourceMappingURL=pomodoro.css.map */

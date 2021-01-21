@@ -2,13 +2,18 @@ let minute = 0;
 let second = 0;
 let millisecond = 0;
 let cron;
-let secondTimer = 120
-let total = 120;
+let secondTimer = 25 * 60;
+let total = 25 * 60;
 let isStarted = false;
 let fontSelected;
-let pomodoro = 25 * 60;
-let shortBreak = 5 * 60;
-let longBreak = 15 * 60;
+let pomodoro = 25;
+let shortBreak = 5;
+let longBreak = 15;
+
+document.querySelector('#pomodoro').value = pomodoro;
+document.querySelector('#shortBreak').value = shortBreak;
+document.querySelector('#longBreak').value = longBreak;
+
 
 let font;
 let color = 'orange';
@@ -86,6 +91,26 @@ options.forEach((item, index) => {
             item.classList.remove('active');
         })
         item.classList.add('active');
+        item.classList.forEach(item =>{
+          if(item === 'pomo'){
+            total = pomodoro * 60;
+            secondTimer = pomodoro * 60;
+            pause();
+            reset();
+          }
+          if(item ===  'short'){
+            total = shortBreak * 60;
+            secondTimer = shortBreak * 60;
+            pause();
+            reset()
+          }
+          if(item === 'long'){
+            total = longBreak * 60;
+            secondTimer = longBreak * 60;
+            pause();
+            reset()
+          }
+        })
     });
 });
 
@@ -136,7 +161,7 @@ function timer() {
     second = 0;
     minute++;
   }
-  if(minute == 2){
+  if((minute * 60) == total){
     pause();
   }
   document.getElementById('minute').innerText = returnData(minute);
@@ -155,6 +180,8 @@ function apply(){
 
   switchFonts(html);
 
+  getTimes();
+  
   dialogSettings.close();
 }
 
@@ -192,3 +219,20 @@ function switchColors(html){
     html.classList.add('orange')
   }
 }
+
+function getTimes(){
+  pomodoro = document.querySelector('#pomodoro').value
+  shortBreak = document.querySelector('#shortBreak').value;
+  longBreak = document.querySelector('#longBreak').value;
+}
+
+function reset() {
+  minute = 0;
+  second = 0;
+  millisecond = 0;
+  document.getElementById('minute').innerText = '00';
+  document.getElementById('second').innerText = '00';
+  setProgress();
+}
+
+
