@@ -108,6 +108,22 @@ table {
       flex-wrap: wrap;
 }
 
+:root {
+  --primary: #F87070;
+}
+
+.orange:root {
+  --primary: #F87070;
+}
+
+.ligth-blue:root {
+  --primary: #70F3F8;
+}
+
+.ligth-purple:root {
+  --primary: #D881F8;
+}
+
 .dialog {
   position: relative;
   width: 40%;
@@ -444,7 +460,7 @@ table {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   border-radius: 25px;
-  background-color: #F87070;
+  background-color: var(--primary);
   border: none;
   font-family: "Kumbh Sans", sans-serif;
   color: #EFF1FA;

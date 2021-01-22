@@ -5,6 +5,22 @@
 @import './mixin';
 
 
+:root{
+    --primary: #F87070;
+}
+
+.orange:root{
+    --primary: #F87070; 
+}
+
+.ligth-blue:root{
+    --primary: #70F3F8; 
+}
+
+.ligth-purple:root{
+    --primary: #D881F8; 
+}
+
 .dialog{
     position: relative;
     width: 40%;
@@ -250,7 +266,7 @@
     height: 55px;
     transform: translate(-50%, -50%);
     border-radius: 25px;
-    background-color: $orange;
+    background-color: var(--primary);
     border: none;
     font-family: $khumbsans;
     color: $whitesmoke;
