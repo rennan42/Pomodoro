@@ -1,3 +1,4 @@
+//#region -------------------------------------VARIABLES-------------------------------------------------
 let minute = 0;
 let second = 0;
 let millisecond = 0;
@@ -9,15 +10,14 @@ let fontSelected;
 let pomodoro = 25;
 let shortBreak = 5;
 let longBreak = 15;
+let font;
+let color = 'orange';
+//#endregion -------------------------------------------------------VARIABLES
 
+//#region  ------------------------------------DECLARATIONS-------------------------------------------------
 document.querySelector('#pomodoro').value = pomodoro;
 document.querySelector('#shortBreak').value = shortBreak;
 document.querySelector('#longBreak').value = longBreak;
-
-
-let font;
-let color = 'orange';
-
 const options = document.querySelectorAll('.option');
 const startButton = document.querySelector('#start');
 const dialogSettings = document.querySelector('#dialog-settings');
@@ -26,7 +26,22 @@ const closeButton = document.querySelector('#close-button');
 const fontButton = document.querySelectorAll('#font');
 const colorsButton = document.querySelectorAll('#circle');
 const applyButton = document.querySelector('.button');
+const input = document.querySelector('input');
+var circle = document.querySelector('circle');
 
+//#endregion                                       DECLARATIONS
+
+
+//#region -------------------------------------CIRCLE-------------------------------------------------
+var radius = circle.r.baseVal.value;
+var circumference = radius * 2 * Math.PI;
+
+circle.style.strokeDasharray = `${circumference} ${circumference}`;
+circle.style.strokeDashoffset = `${circumference * 2}`;
+//#endregion -----------------------------------------------CIRCLE
+
+
+//#region -------------------------------------LISTENERS -------------------------------------------------
 
 applyButton.addEventListener('click', () => {
   apply();
@@ -114,25 +129,15 @@ options.forEach((item, index) => {
     });
 });
 
+//#endregion EVENTS
 
 
-// Barra do contador
-var circle = document.querySelector('circle');
-var radius = circle.r.baseVal.value;
-var circumference = radius * 2 * Math.PI;
 
-circle.style.strokeDasharray = `${circumference} ${circumference}`;
-circle.style.strokeDashoffset = `${circumference * 2}`;
-
-function setProgress(second) {
+//#region -------------------------------------FUNCTIONS ------------------------------------------------
+function setProgress() {
   const offset = circumference - secondTimer / total * circumference;
   circle.style.strokeDashoffset = offset;
 }
-
-const input = document.querySelector('input');
-
-//Barra do contador
-
 
 function start() {
   if(isStarted){
@@ -235,4 +240,5 @@ function reset() {
   setProgress();
 }
 
+//#endregion --------------------------------------------------- FUNCTIONS
 
