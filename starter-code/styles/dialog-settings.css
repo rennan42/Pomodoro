@@ -110,6 +110,19 @@ table {
 
 :root {
   --primary: #F87070;
+  --primary-font: 'Kumbh Sans', sans-serif;
+}
+
+.khubms:root {
+  --primary-font: 'Kumbh Sans', sans-serif;
+}
+
+.robotoslab:root {
+  --primary-font: 'Roboto Slab', serif;
+}
+
+.spacemono:root {
+  --primary-font: 'Space Mono', monospace;
 }
 
 .orange:root {
@@ -157,7 +170,7 @@ table {
 .dialog .header .header-text {
   width: 100%;
   height: 15%;
-  font-family: "Kumbh Sans", sans-serif;
+  font-family: var(--primary-font);
   font-size: 28px;
   line-height: 28px;
   font-weight: bold;
@@ -223,7 +236,7 @@ table {
 }
 
 .dialog .time-minutes {
-  font-family: "Kumbh Sans", sans-serif;
+  font-family: var(--primary-font);
   color: #161932;
   letter-spacing: 5px;
   font-weight: bold;
@@ -244,7 +257,7 @@ table {
 }
 
 .dialog .inputs-values label {
-  font-family: "Kumbh Sans", sans-serif;
+  font-family: var(--primary-font);
   color: #1e213f69;
   font-weight: bold;
   font-size: 14px;
@@ -256,7 +269,7 @@ table {
   height: 90%;
   width: 90%;
   background-color: #1e213f14;
-  font-family: "Kumbh Sans", sans-serif;
+  font-family: var(--primary-font);
   font-size: 14px;
   font-weight: bold;
   padding: 15px;
@@ -298,7 +311,7 @@ table {
 }
 
 .dialog .container-font .font-text {
-  font-family: "Kumbh Sans", sans-serif;
+  font-family: var(--primary-font);
   font-weight: bold;
   letter-spacing: 5px;
   text-transform: uppercase;
@@ -350,7 +363,7 @@ table {
 }
 
 .dialog .container-font .container-circles .font-1 {
-  font-family: "Kumbh Sans", sans-serif;
+  font-family: var(--primary-font);
   font-weight: bold;
 }
 
@@ -438,7 +451,7 @@ table {
 }
 
 .dialog .container-color .font-color {
-  font-family: "Kumbh Sans", sans-serif;
+  font-family: var(--primary-font);
   font-weight: bold;
   letter-spacing: 5px;
   text-transform: uppercase;
@@ -462,7 +475,7 @@ table {
   border-radius: 25px;
   background-color: var(--primary);
   border: none;
-  font-family: "Kumbh Sans", sans-serif;
+  font-family: var(--primary-font);
   color: #EFF1FA;
   font-weight: bold;
   font-size: 18px;

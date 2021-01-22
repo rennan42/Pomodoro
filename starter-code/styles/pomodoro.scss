@@ -3,37 +3,7 @@
 @import './colors';
 @import './fonts';
 @import './mixin';
-
-
-:root{
-    --primary: #F87070;
-    --primary-font: 'Kumbh Sans', sans-serif;
-}
-
-.khubms:root{
-    --primary-font: 'Kumbh Sans', sans-serif;
-}
-
-.robotoslab:root{
-    --primary-font: 'Roboto Slab', serif;
-}
-
-.spacemono:root{
-    --primary-font: 'Space Mono', monospace;
-}
-
-
-.orange:root{
-    --primary: #F87070; 
-}
-
-.ligth-blue:root{
-    --primary: #70F3F8; 
-}
-
-.ligth-purple:root{
-    --primary: #D881F8; 
-}
+@import './fonts-colos-global';
 
 
 body{
