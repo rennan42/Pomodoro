@@ -52,6 +52,10 @@
         border-top: 1px solid $divider;
     }
 
+    .min-divider{
+        width: 90%;
+    }
+
     .container-inputs{
         display: flex;
         flex-direction: row;
@@ -67,6 +71,7 @@
         text-transform: uppercase;
         display: block;
         width: 100%;
+        font-size: 14px;
     }
 
     .inputs-values{
@@ -76,8 +81,9 @@
 
         label{
             font-family: $khumbsans;
-            color: $darkblue;
+            color: #1e213f69;
             font-weight: bold;
+            font-size: 14px;
         }
 
         .inputs{
@@ -87,7 +93,7 @@
             width: 90%;
             background-color: #1e213f14;
             font-family: $khumbsans;
-            font-size: 20px;
+            font-size: 14px;
             font-weight: bold;
             padding: 15px;
             margin-top: 8px;
@@ -112,14 +118,14 @@
         margin-top: 3%;
     }
     .divider-font{
-        margin: 0%;
+        border-top: 1px solid $divider;
     }
 
     .container-font{
         display: flex;
         height: 15%;
         justify-content: space-between;
-        margin: 30px 38px 0px 38px;
+        margin: 30px 25px 0px 25px;
 
         .font-text{
             font-family: $khumbsans;
@@ -127,6 +133,7 @@
             letter-spacing: 5px;
             text-transform: uppercase;
             margin-top: 3%;
+            font-size: 14px;
         }
 
         .container-circles{
@@ -141,7 +148,7 @@
             .circles{
                 border-radius: 50%;
                 color: $darkblue;
-                background-color: $gray;
+                background-color: $circles;
                 width: 40px;
                 height: 40px;
                 justify-content: center;
@@ -155,14 +162,17 @@
 
             .font-1{
                 font-family: $khumbsans;
+                font-weight: bold;
             }
 
             .font-2{
                 font-family: $robotoslam;
+                font-weight: bold;
             }
 
             .font-3{
                 font-family: $spacemono;
+                font-weight: bold;
             }
         }
     }
@@ -171,7 +181,7 @@
         display: flex;
         height: 15%;
         justify-content: space-between;
-        margin: 30px 38px 0px 38px;
+        margin: 20px 25px 0px 25px;
 
         .container-circles-color{
             display: flex;
@@ -191,9 +201,11 @@
                 display: flex;
                 @include hover-text-animation;
                 cursor: pointer;
+                
 
                 span{
                     color: $whitesmoke;
+                    
                 }
             }
 
@@ -220,6 +232,7 @@
             letter-spacing: 5px;
             text-transform: uppercase;
             margin-top: 3%;
+            font-size: 14px;
         }
     }
 }
@@ -308,6 +321,7 @@ input::-webkit-inner-spin-button {
          flex-direction: row !important;
          justify-content: space-between !important;
          align-items: center !important;
+
      }
 
      .container-color{
@@ -328,6 +342,8 @@ input::-webkit-inner-spin-button {
         justify-content: center !important;
         align-items: center !important;
         display: flex!important;
+        font-size: 11px !important;
+        
      }
 
      .container-font{
@@ -348,12 +364,34 @@ input::-webkit-inner-spin-button {
         justify-content: center !important;
         align-items: center !important;
         height: 18% !important;
-        margin-left: 38px !important;
-        margin-right: 38px !important;
+        margin-left: 25px !important;
+        margin-right: 25px !important;
      }
 
      .container-circles-color{
         width: 90% !important;
         
+     }
+
+     .font-text{
+         font-size: 11px !important;
+         margin-bottom: 3% !important;
+     }
+
+     .font-color{
+         font-size: 11px !important;
+         margin-bottom: 3% !important;
+     }
+
+     .header-text{
+         font-size: 20px !important;
+     }
+
+     .header{
+         padding-left: 5px !important;
+     }
+
+     #close-button{
+        margin-right: 5px !important;
      }
  }

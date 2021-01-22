@@ -4,6 +4,7 @@ let second = 0;
 let millisecond = 0;
 let cron;
 let secondTimer = 25 * 60;
+let secondTimerReset = 0
 let total = 25 * 60;
 let isStarted = false;
 let fontSelected;
@@ -107,24 +108,7 @@ options.forEach((item, index) => {
         })
         item.classList.add('active');
         item.classList.forEach(item =>{
-          if(item === 'pomo'){
-            total = pomodoro * 60;
-            secondTimer = pomodoro * 60;
-            pause();
-            reset();
-          }
-          if(item ===  'short'){
-            total = shortBreak * 60;
-            secondTimer = shortBreak * 60;
-            pause();
-            reset()
-          }
-          if(item === 'long'){
-            total = longBreak * 60;
-            secondTimer = longBreak * 60;
-            pause();
-            reset()
-          }
+          setTimers(item);
         })
     });
 });
@@ -134,6 +118,31 @@ options.forEach((item, index) => {
 
 
 //#region -------------------------------------FUNCTIONS ------------------------------------------------
+function setTimers(item){
+    if(item === 'pomo'){
+      total = pomodoro * 60;
+      secondTimer = pomodoro * 60;
+      secondTimerReset = pomodoro * 60;
+      pause();
+      reset();
+    }
+    if(item ===  'short'){
+      total = shortBreak * 60;
+      secondTimer = shortBreak * 60;
+      secondTimerReset = shortBreak * 60;
+      pause();
+      reset()
+    }
+    if(item === 'long'){
+      total = longBreak * 60;
+      secondTimer = longBreak * 60;
+      secondTimerReset = longBreak * 60;
+      pause();
+      reset()
+    }
+}
+
+
 function setProgress() {
   const offset = circumference - secondTimer / total * circumference;
   circle.style.strokeDashoffset = offset;
@@ -167,7 +176,11 @@ function timer() {
     minute++;
   }
   if((minute * 60) == total){
+    secondTimer = secondTimerReset;
     pause();
+    reset();
+    document.getElementById('start').innerText = 'restart';
+    isStarted = false;
   }
   document.getElementById('minute').innerText = returnData(minute);
   document.getElementById('second').innerText = returnData(second);
@@ -229,6 +242,12 @@ function getTimes(){
   pomodoro = document.querySelector('#pomodoro').value
   shortBreak = document.querySelector('#shortBreak').value;
   longBreak = document.querySelector('#longBreak').value;
+
+  let timeActive = document.querySelector('.active');
+  timeActive.classList.forEach(item => {
+    setTimers(item);
+  })
+
 }
 
 function reset() {

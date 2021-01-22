@@ -313,7 +313,7 @@ main {
 }
 
 .clock .second-clock #start {
-  font-family: "Kumbh Sans", sans-serif;
+  font-family: var(--primary-font);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -335,6 +335,10 @@ main {
 
 .clock .second-clock #start:hover {
   opacity: 0.7;
+}
+
+.clock .second-clock #start:hover {
+  color: var(--primary);
 }
 
 .settings {

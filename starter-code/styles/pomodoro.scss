@@ -157,7 +157,7 @@ main{
         }
 
         #start{
-            font-family: $khumbsans;
+            font-family: var(--primary-font);;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -167,6 +167,9 @@ main{
             font-weight: 700;
             margin-left: 10px;
             text-transform: uppercase;
+        }
+        #start:hover{
+            color: var(--primary);
         }
     }
 }
