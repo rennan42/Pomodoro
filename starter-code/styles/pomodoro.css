@@ -387,4 +387,15 @@ main {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+
+@media (max-width: 900px) {
+  .clock {
+    height: 360px !important;
+    width: 360px !important;
+  }
+  .second-clock {
+    height: 347px !important;
+    width: 347px !important;
+  }
+}
 /*# sourceMappingURL=pomodoro.css.map */
